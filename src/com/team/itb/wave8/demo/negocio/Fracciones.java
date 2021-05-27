@@ -114,4 +114,12 @@ public class Fracciones {
             }
         }
     }
+
+    @Override
+    public String toString() {
+        if(denominador != 1){
+            return numerador + "/" + denominador;
+        }
+        return String.valueOf(numerador);
+    }
 }
