@@ -42,4 +42,8 @@ public class Contador {
         this.numeroActual--;
    }
 
+    @Override
+    public String toString() {
+        return "El contador va en:" + this.numeroActual;
+    }
 }

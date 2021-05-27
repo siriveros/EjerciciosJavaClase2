@@ -94,7 +94,7 @@ public class CuentaCorriente {
 
     public void transferencia(double montoTransferencia, CuentaCorriente cuentaDestino) throws Exception {
         if(montoTransferencia > this.limiteTransferencia){
-            throw new Exception("El monto del egreso supera el limite definido");
+            throw new Exception("El monto de la transferencia supera el limite definido");
         }
 
         if(this.saldo - montoTransferencia < 0){
@@ -103,5 +103,10 @@ public class CuentaCorriente {
 
         this.saldo -= montoTransferencia;
         cuentaDestino.ingreso(montoTransferencia);
+    }
+
+    @Override
+    public String toString() {
+        return "Numero de cuenta: " + this.numeroCuenta + " saldo actual: " + saldo;
     }
 }
